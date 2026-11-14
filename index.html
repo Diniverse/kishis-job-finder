@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kishi's Job Finder</title>
+<meta name="description" content="Care, NHS, pharmacy, lab, admin and school support jobs in Hull and East Yorkshire, refreshed twice a day.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Layout: one centred column (max 720px). Top bar, tabs, chips, then a list of tonal cards; a job opens as a sheet. Material 3 tonal approach, seed = Humber teal. */
+  --primary:#0f6a6c;
+  --on-primary:#ffffff;
+  --primary-container:#c6ecea;
+  --on-primary-container:#002021;
+  --surface:#f7faf9;
+  --surface-1:#eef4f3;
+  --surface-2:#e6eeed;
+  --on-surface:#171d1d;
+  --on-surface-var:#4a5757;
+  --outline:#c2cdcc;
+  --good:#1e6b3a; --good-c:#d3f0db;
+  --warn:#7a5200; --warn-c:#ffe3b3;
+  --crit:#a3261c; --crit-c:#ffdad5;
+  --scrim:rgba(10,20,20,.38);
+  --font:"Roboto Flex","Segoe UI",system-ui,-apple-system,sans-serif;
+  --r-card:20px; --r-pill:999px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --primary:#83d4d3; --on-primary:#003738; --primary-container:#004f51; --on-primary-container:#a0f0ef;
+    --surface:#0f1515; --surface-1:#172020; --surface-2:#1d2828; --on-surface:#dde4e3; --on-surface-var:#a8b6b5; --outline:#3a4847;
+    --good:#8fd8a4; --good-c:#13361f; --warn:#f3c26b; --warn-c:#3d2c00; --crit:#ffb4aa; --crit-c:#5c1610; --scrim:rgba(0,0,0,.6);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --primary:#83d4d3; --on-primary:#003738; --primary-container:#004f51; --on-primary-container:#a0f0ef;
+  --surface:#0f1515; --surface-1:#172020; --surface-2:#1d2828; --on-surface:#dde4e3; --on-surface-var:#a8b6b5; --outline:#3a4847;
+  --good:#8fd8a4; --good-c:#13361f; --warn:#f3c26b; --warn-c:#3d2c00; --crit:#ffb4aa; --crit-c:#5c1610; --scrim:rgba(0,0,0,.6);
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;overflow-x:hidden}
+body{background:var(--surface);color:var(--on-surface);font-family:var(--font);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--primary);outline-offset:2px}
+.app{max-width:720px;margin:0 auto;padding:0 16px 96px}
+
+/* top bar */
+.top{padding:28px 0 8px;display:grid;gap:4px}
+.top h1{margin:0;font-size:1.7rem;font-weight:600;letter-spacing:-.015em;line-height:1.15;text-wrap:balance}
+.top p{margin:0;color:var(--on-surface-var);font-size:.92rem}
+.summary{display:flex;gap:16px;flex-wrap:wrap;font-size:.9rem;color:var(--on-surface-var);padding:6px 0 4px}
+.summary b{color:var(--on-surface);font-weight:600;font-variant-numeric:tabular-nums}
+
+/* tabs */
+.tabs{max-width:100%;position:sticky;top:0;z-index:5;background:var(--surface);display:flex;gap:4px;padding:10px 0;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;border:0;background:transparent;padding:9px 16px;border-radius:var(--r-pill);font-weight:500;font-size:.95rem;color:var(--on-surface-var)}
+.tab[aria-selected="true"]{background:var(--primary-container);color:var(--on-primary-container)}
+.tab .n{font-size:.78rem;margin-left:6px;opacity:.75;font-variant-numeric:tabular-nums}
+
+/* search + chips */
+.tools{display:grid;gap:10px;padding:4px 0 12px}
+.search{display:flex;align-items:center;gap:8px;background:var(--surface-2);border-radius:var(--r-pill);padding:0 16px;height:48px}
+.search input{flex:1;border:0;background:transparent;outline:none;font-size:1rem;min-width:0}
+.search svg{flex:0 0 auto;opacity:.6}
+.search select{border:0;background:transparent;font-size:.88rem;color:var(--on-surface-var);outline:none}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;border:1px solid var(--outline);background:transparent;border-radius:8px;padding:6px 12px;font-size:.86rem;font-weight:500;color:var(--on-surface-var)}
+.chip[aria-pressed="true"]{background:var(--primary-container);border-color:transparent;color:var(--on-primary-container)}
+
+/* list */
+.list{display:grid;gap:10px}
+.card{display:grid;gap:10px;text-align:left;width:100%;border:0;background:var(--surface-1);border-radius:var(--r-card);padding:16px 18px;transition:background .15s}
+.card:hover{background:var(--surface-2)}
+.card h2{margin:0;font-size:1.05rem;font-weight:600;line-height:1.3;text-wrap:balance}
+.card .sub{font-size:.9rem;color:var(--on-surface-var);margin-top:2px}
+.card .row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:4px;border-radius:8px;padding:3px 9px;font-size:.78rem;font-weight:600;white-space:nowrap}
+.p-strong{background:var(--good-c);color:var(--good)}
+.p-good{background:var(--primary-container);color:var(--on-primary-container)}
+.p-stretch{background:var(--warn-c);color:var(--warn)}
+.p-urgent{background:var(--crit-c);color:var(--crit)}
+.p-soon{background:var(--warn-c);color:var(--warn)}
+.p-plain{background:var(--surface-2);color:var(--on-surface-var);font-weight:500}
+.p-status{background:var(--on-surface);color:var(--surface)}
+.pay{font-size:.86rem;color:var(--on-surface-var)}
+.empty{padding:40px 20px;text-align:center;color:var(--on-surface-var)}
+.more{display:flex;gap:8px;justify-content:center;padding:16px 0}
+.text-btn{border:0;background:transparent;color:var(--primary);font-weight:600;padding:8px 12px;border-radius:var(--r-pill)}
+.text-btn:hover{background:var(--surface-2)}
+.note{background:var(--surface-1);border-radius:16px;padding:14px 16px;color:var(--on-surface-var);font-size:.92rem}
+.note.warn{background:var(--warn-c);color:var(--warn)}
+
+/* buttons */
+.btn{border:0;border-radius:var(--r-pill);padding:10px 20px;font-weight:600;font-size:.92rem;min-height:44px}
+.btn.filled{background:var(--primary);color:var(--on-primary)}
+.btn.tonal{background:var(--primary-container);color:var(--on-primary-container)}
+.btn.outline{background:transparent;border:1px solid var(--outline);color:var(--primary)}
+.btn:disabled{opacity:.45;cursor:default}
+a.btn{display:inline-flex;align-items:center;text-decoration:none}
+.btns{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+
+/* sheet */
+.scrim{position:fixed;inset:0;background:var(--scrim);z-index:20;display:none}
+.scrim.open{display:block}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:21;background:var(--surface);border-radius:28px 28px 0 0;max-height:92%;overflow:auto;display:none;box-shadow:0 -8px 32px rgba(0,0,0,.18)}
+.sheet.open{display:block}
+@media (min-width:760px){.sheet{left:50%;right:auto;bottom:auto;top:4%;transform:translateX(-50%);width:680px;border-radius:28px;max-height:92%}}
+.sheet-in{padding:12px 20px 32px;display:grid;gap:20px}
+.handle{width:36px;height:4px;border-radius:2px;background:var(--outline);margin:4px auto 0}
+.sheet-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.sheet-head h2{margin:0;font-size:1.35rem;font-weight:600;line-height:1.25;text-wrap:balance}
+.icon-btn{border:0;background:var(--surface-2);border-radius:50%;width:40px;height:40px;flex:0 0 auto;display:grid;place-items:center}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:.93rem;margin:0}
+.facts dt{color:var(--on-surface-var)}
+.facts dd{margin:0;font-weight:500}
+.why{margin:0;font-size:.95rem;color:var(--on-surface)}
+.section{display:grid;gap:10px}
+.section h3{margin:0;font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--on-surface-var)}
+.steps{display:flex;flex-wrap:wrap;gap:8px}
+.step{border:1px solid var(--outline);background:transparent;border-radius:8px;padding:8px 14px;font-size:.88rem;font-weight:500;color:var(--on-surface-var)}
+.step[aria-pressed="true"]{background:var(--on-surface);color:var(--surface);border-color:transparent}
+.step.neg[aria-pressed="true"]{background:var(--crit-c);color:var(--crit)}
+label.lbl{font-size:.86rem;color:var(--on-surface-var);display:block;margin-bottom:4px}
+.field{width:100%;border:1px solid var(--outline);background:var(--surface);border-radius:12px;padding:10px 12px;font-size:.95rem}
+textarea.field{resize:vertical;line-height:1.5}
+textarea.doc{min-height:340px;font-size:.9rem}
+.msg{font-size:.86rem;color:var(--on-surface-var)}
+.msg.err{color:var(--crit)}
+.box{background:var(--surface-1);border-radius:16px;padding:12px 14px}
+.box h4{margin:0 0 4px;font-size:.86rem;font-weight:600}
+.box ul{margin:0;padding-left:18px;font-size:.88rem;display:grid;gap:3px}
+.box.warn{background:var(--warn-c);color:var(--warn)}
+.cv-edit{min-height:60vh;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.84rem}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (prefers-reduced-motion:no-preference){.sheet.open{animation:up .22s ease-out}@keyframes up{from{transform:translateY(24px);opacity:.6}}}
+@media (prefers-reduced-motion:no-preference) and (min-width:760px){.sheet.open{animation:fade .18s ease-out}@keyframes fade{from{opacity:0}}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <h1>Kishi's Job Finder</h1>
+    <p id="scan">Loading jobs…</p>
+    <div class="summary" id="summary"></div>
+  </header>
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button class="tab" role="tab" data-tab="foryou" aria-selected="true">Jobs<span class="n" id="n-foryou"></span></button>
+    <button class="tab" role="tab" data-tab="saved" aria-selected="false">Saved<span class="n" id="n-saved"></span></button>
+    <button class="tab" role="tab" data-tab="apps" aria-selected="false">Applied<span class="n" id="n-apps"></span></button>
+  </nav>
+  <div class="tools">
+    <div class="search">
+      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+      <label for="q" class="vh">Search jobs</label>
+      <input id="q" type="search" placeholder="Search jobs, employers, towns">
+      <label for="sort" class="vh">Sort</label>
+      <select id="sort"><option value="best">Best match</option><option value="closing">Closing soon</option><option value="new">Newest</option></select>
+    </div>
+    <div class="chips" id="cats" role="group" aria-label="Job type"></div>
+  </div>
+  <main class="list" id="list" aria-live="polite"><div class="empty">Loading jobs…</div></main>
+  <div class="more" id="more"></div>
+  <p class="msg" style="margin-top:28px">Jobs come from NHS Jobs, Healthjobs UK, Job Clerk, GOV.UK Find a Job, Teaching Vacancies, care and pharmacy employers and agencies, and are checked twice a day. "Saved" and "Applied" are remembered on this device only. Always open the advert to check the details and closing date before applying.</p>
+  <p class="msg" id="ws"></p>
+</div>
+<div class="scrim" id="scrim"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle"></div>
+<script>
+(function(){
+  "use strict";
+  const WORKSPACE="https://claude.ai/artifact/Ky7JXLE9y7fCgXVYNEWNQs";
+  const CATS=["Healthcare Assistant","Care & Support","Pharmacy","Lab & Phlebotomy","Admin & Clerical","Health Data & Digital","Schools & SEN"];
+  const FIT_W={strong:30,good:20,stretch:10}, FIT_LABEL={strong:"Strong fit",good:"Good fit",stretch:"Stretch"};
+  const S={jobs:[],updatedAt:null,marks:{},tab:"foryou",cats:new Set(),q:"",sort:"best",view:"open",sheet:null,loaded:false,error:null};
+  const $=s=>document.querySelector(s);
+  function el(t,c,x){const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e;}
+  try{ S.marks=JSON.parse(localStorage.getItem("kjf-marks")||"{}")||{}; }catch(e){ S.marks={}; }
+  function saveMarks(){ try{ localStorage.setItem("kjf-marks",JSON.stringify(S.marks)); }catch(e){} }
+  function mark(id){ return S.marks[id]||""; }
+  function setMark(id,v){ if(!v||S.marks[id]===v) delete S.marks[id]; else S.marks[id]=v; saveMarks(); render(); if(S.sheet) renderSheet(); }
+
+  function today0(){const d=new Date();d.setHours(0,0,0,0);return d;}
+  function daysLeft(c){ if(!c) return null; const d=new Date(c+"T23:59:00"); if(isNaN(d)) return null; return Math.floor((d-today0())/864e5); }
+  function fmt(iso){const d=new Date(iso+(iso.length===10?"T12:00:00":""));return isNaN(d)?iso:d.toLocaleDateString("en-GB",{day:"numeric",month:"short"});}
+  function isClosed(j){const n=daysLeft(j.closes);return n!==null&&n<0;}
+  function due(j){const n=daysLeft(j.closes);
+    if(n===null) return {cls:"p-plain",text:"No closing date"}; if(n<0) return {cls:"p-plain",text:"Closed"};
+    if(n===0) return {cls:"p-urgent",text:"Closes today"}; if(n===1) return {cls:"p-urgent",text:"Closes tomorrow"};
+    if(n<=3) return {cls:"p-urgent",text:n+" days left"}; if(n<=7) return {cls:"p-soon",text:n+" days left"};
+    return {cls:"p-plain",text:"Closes "+fmt(j.closes)};}
+  function score(j){const n=daysLeft(j.closes);let u=0;if(n!==null){if(n<=3)u=12;else if(n<=7)u=8;else if(n<=14)u=4;}return (FIT_W[j.fit]||0)+u;}
+
+  function inTab(j){ const m=mark(j.id), closed=isClosed(j);
+    if(S.tab==="saved") return m==="saved";
+    if(S.tab==="apps") return m==="applied";
+    if(S.view==="hidden") return m==="hidden";
+    if(S.view==="closed") return closed&&!m;
+    return !closed&&m!=="hidden"&&m!=="applied"; }
+  function visible(){ const q=S.q.trim().toLowerCase();
+    return S.jobs.filter(j=>inTab(j)&&(!S.cats.size||S.cats.has(j.category))&&(!q||((j.title||"")+" "+(j.employer||"")+" "+(j.location||"")).toLowerCase().includes(q)))
+      .sort((a,b)=>{ if(S.sort==="new") return (b.addedAt||"").localeCompare(a.addedAt||"");
+        if(S.sort==="closing"){const x=daysLeft(a.closes),y=daysLeft(b.closes);return (x===null?9999:x)-(y===null?9999:y);}
+        return score(b)-score(a)||((daysLeft(a.closes)??9999)-(daysLeft(b.closes)??9999)); }); }
+
+  function render(){
+    const open=S.jobs.filter(j=>!isClosed(j)&&mark(j.id)!=="hidden"&&mark(j.id)!=="applied");
+    const sum=$("#summary"); sum.textContent="";
+    if(S.loaded){ [[open.length,"open jobs"],[open.filter(j=>{const n=daysLeft(j.closes);return n!==null&&n<=7;}).length,"closing this week"],[open.filter(j=>j.fit==="strong").length,"strong fit"]].forEach(([n,l])=>{const s=el("span");s.appendChild(el("b",null,String(n)));s.append(" "+l);sum.appendChild(s);}); }
+    $("#scan").textContent = S.updatedAt ? "Updated "+new Date(S.updatedAt).toLocaleString("en-GB",{weekday:"short",day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})+". Refreshed twice a day." : (S.loaded?"Refreshed twice a day.":"Loading jobs…");
+    $("#n-foryou").textContent=S.loaded?open.length:"";
+    $("#n-saved").textContent=Object.values(S.marks).filter(v=>v==="saved").length||"";
+    $("#n-apps").textContent=Object.values(S.marks).filter(v=>v==="applied").length||"";
+    document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected",b.dataset.tab===S.tab?"true":"false"));
+    const list=$("#list"); list.textContent="";
+    if(S.error) list.appendChild(el("div","note warn",S.error));
+    if(!S.loaded){ if(!S.error) list.appendChild(el("div","empty","Loading jobs…")); return; }
+    const rows=visible();
+    if(!rows.length) list.appendChild(el("div","empty", S.tab==="saved"?"Nothing saved on this device yet.":S.tab==="apps"?"Nothing marked as applied on this device yet.":"No jobs match. Try clearing the filters."));
+    rows.forEach(j=>list.appendChild(card(j)));
+    const m=$("#more"); m.textContent="";
+    if(S.tab==="foryou"){ const hid=S.jobs.filter(j=>mark(j.id)==="hidden").length, cl=S.jobs.filter(j=>isClosed(j)&&!mark(j.id)).length;
+      const mk=(v,l)=>{const b=el("button","text-btn",l);b.type="button";b.addEventListener("click",()=>{S.view=v;render();window.scrollTo({top:0});});m.appendChild(b);};
+      if(S.view!=="open") mk("open","Back to open jobs"); if(S.view!=="hidden"&&hid) mk("hidden","Hidden ("+hid+")"); if(S.view!=="closed"&&cl) mk("closed","Closed ("+cl+")"); }
+  }
+  function card(j){ const c=el("button","card"); c.type="button";
+    const top=el("div"); top.appendChild(el("h2",null,j.title||"Job")); top.appendChild(el("div","sub",[j.employer,j.location].filter(Boolean).join(" · "))); c.appendChild(top);
+    const row=el("div","row"); const m=mark(j.id);
+    if(m==="saved") row.appendChild(el("span","pill p-status","Saved")); if(m==="applied") row.appendChild(el("span","pill p-status","Applied"));
+    const d=due(j); row.appendChild(el("span","pill "+d.cls,d.text));
+    if(j.fit) row.appendChild(el("span","pill p-"+j.fit,FIT_LABEL[j.fit]||j.fit));
+    if(j.pay) row.appendChild(el("span","pay",j.pay));
+    c.appendChild(row); c.addEventListener("click",()=>openSheet(j.id)); return c; }
+  function renderCats(){ const box=$("#cats"); box.textContent=""; CATS.forEach(cat=>{ const b=el("button","chip",cat); b.type="button"; b.setAttribute("aria-pressed",S.cats.has(cat)?"true":"false"); b.addEventListener("click",()=>{S.cats.has(cat)?S.cats.delete(cat):S.cats.add(cat);renderCats();render();}); box.appendChild(b); }); }
+
+  const sheet=$("#sheet"), scrim=$("#scrim"); let lastFocus=null;
+  function openSheet(id){ lastFocus=document.activeElement; S.sheet=id; sheet.classList.add("open"); scrim.classList.add("open"); document.body.style.overflow="hidden"; renderSheet(); const x=sheet.querySelector(".icon-btn"); x&&x.focus(); }
+  function closeSheet(){ S.sheet=null; sheet.classList.remove("open"); scrim.classList.remove("open"); document.body.style.overflow=""; sheet.textContent=""; lastFocus&&lastFocus.focus&&lastFocus.focus(); }
+  scrim.addEventListener("click",closeSheet); document.addEventListener("keydown",e=>{ if(e.key==="Escape"&&S.sheet) closeSheet(); });
+  function renderSheet(){ const j=S.jobs.find(x=>x.id===S.sheet); if(!j){closeSheet();return;}
+    sheet.textContent=""; const w=el("div","sheet-in"); w.appendChild(el("div","handle"));
+    const head=el("div","sheet-head"), ht=el("div"), h=el("h2",null,j.title||"Job"); h.id="sheetTitle"; ht.appendChild(h); ht.appendChild(el("div","sub",[j.employer,j.location].filter(Boolean).join(" · ")));
+    const x=el("button","icon-btn"); x.type="button"; x.setAttribute("aria-label","Close"); x.innerHTML='<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>'; x.addEventListener("click",closeSheet);
+    head.append(ht,x); w.appendChild(head);
+    const p=el("div","row"); p.style.cssText="display:flex;gap:6px;flex-wrap:wrap"; const d=due(j); p.appendChild(el("span","pill "+d.cls,d.text)); if(j.fit) p.appendChild(el("span","pill p-"+j.fit,FIT_LABEL[j.fit])); if(j.category) p.appendChild(el("span","pill p-plain",j.category)); w.appendChild(p);
+    if(j.why) w.appendChild(el("p","why",j.why));
+    const f=el("dl","facts"); [["Pay",j.pay],["Hours",j.hours],["Closes",j.closes?fmt(j.closes):"Not given"],["Posted",j.posted?fmt(j.posted):""],["Found on",j.source]].forEach(([k,v])=>{ if(!v) return; f.appendChild(el("dt",null,k)); f.appendChild(el("dd",null,v)); }); w.appendChild(f);
+    const b=el("div","btns"); if(j.url&&/^https?:\/\//.test(j.url)){ const a=el("a","btn filled","Open advert"); a.href=j.url; a.target="_blank"; a.rel="noopener"; b.appendChild(a); }
+    [["saved","Save"],["applied","Mark applied"],["hidden","Hide"]].forEach(([v,l])=>{ const bt=el("button","btn "+(mark(j.id)===v?"tonal":"outline"), mark(j.id)===v?(v==="saved"?"Saved ✓":v==="applied"?"Applied ✓":"Hidden ✓"):l); bt.type="button"; bt.addEventListener("click",()=>{ setMark(j.id,v); if(v==="hidden"&&mark(j.id)==="hidden") closeSheet(); }); b.appendChild(bt); });
+    w.appendChild(b); sheet.appendChild(w); }
+
+  document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{S.tab=b.dataset.tab;S.view="open";render();}));
+  $("#q").addEventListener("input",e=>{S.q=e.target.value;render();});
+  $("#sort").addEventListener("change",e=>{S.sort=e.target.value;render();});
+  const ws=$("#ws"); ws.append("Kishi: tailor your CV and track applications in your "); const a=el("a",null,"private workspace"); a.href=WORKSPACE; a.target="_blank"; a.rel="noopener"; a.style.color="var(--primary)"; ws.appendChild(a); ws.append(" (needs Claude sign-in).");
+  renderCats(); render();
+  async function load(){
+    try{ const r=await fetch("jobs.json?t="+Date.now(),{cache:"no-store"}); if(!r.ok) throw 0; const d=await r.json();
+      S.jobs=(d.jobs||[]).filter(j=>j&&j.id&&j.title); S.updatedAt=d.updatedAt||null; S.loaded=true; S.error=null;
+    }catch(e){ S.error="Couldn't load the job list. Check your connection and refresh."; }
+    render(); if(S.sheet) renderSheet();
+  }
+  load();
+  document.addEventListener("visibilitychange",()=>{ if(document.visibilityState==="visible") load(); });
+})();
+</script>
+</body>
+</html>
