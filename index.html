@@ -170,14 +170,12 @@ textarea.doc{min-height:340px;font-size:.9rem}
   <main class="list" id="list" aria-live="polite"><div class="empty">Loading jobs…</div></main>
   <div class="more" id="more"></div>
   <p class="msg" style="margin-top:28px">Jobs come from NHS Jobs, Healthjobs UK, Job Clerk, GOV.UK Find a Job, Teaching Vacancies, care and pharmacy employers and agencies, and are checked twice a day. "Saved" and "Applied" are remembered on this device only. Always open the advert to check the details and closing date before applying.</p>
-  <p class="msg" id="ws"></p>
 </div>
 <div class="scrim" id="scrim"></div>
 <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle"></div>
 <script>
 (function(){
   "use strict";
-  const WORKSPACE="https://claude.ai/artifact/Ky7JXLE9y7fCgXVYNEWNQs";
   const CATS=["Healthcare Assistant","Care & Support","Pharmacy","Lab & Phlebotomy","Admin & Clerical","Health Data & Digital","Schools & SEN"];
   const FIT_W={strong:30,good:20,stretch:10}, FIT_LABEL={strong:"Strong fit",good:"Good fit",stretch:"Stretch"};
   const S={jobs:[],updatedAt:null,marks:{},tab:"foryou",cats:new Set(),q:"",sort:"best",view:"open",sheet:null,loaded:false,error:null};
@@ -260,7 +258,6 @@ textarea.doc{min-height:340px;font-size:.9rem}
   document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{S.tab=b.dataset.tab;S.view="open";render();}));
   $("#q").addEventListener("input",e=>{S.q=e.target.value;render();});
   $("#sort").addEventListener("change",e=>{S.sort=e.target.value;render();});
-  const ws=$("#ws"); ws.append("Kishi: tailor your CV and track applications in your "); const a=el("a",null,"private workspace"); a.href=WORKSPACE; a.target="_blank"; a.rel="noopener"; a.style.color="var(--primary)"; ws.appendChild(a); ws.append(" (needs Claude sign-in).");
   renderCats(); render();
   async function load(){
     try{ const r=await fetch("jobs.json?t="+Date.now(),{cache:"no-store"}); if(!r.ok) throw 0; const d=await r.json();
