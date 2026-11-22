@@ -71,8 +71,7 @@ button{cursor:pointer}
 .search input{flex:1;border:0;background:transparent;outline:none;font-size:1rem;min-width:0}
 .search svg{flex:0 0 auto;opacity:.6}
 .search select{border:0;background:transparent;font-size:.88rem;color:var(--on-surface-var);outline:none}
-.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
-.chips::-webkit-scrollbar{display:none}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding-bottom:2px}
 .chip{flex:0 0 auto;border:1px solid var(--outline);background:transparent;border-radius:8px;padding:6px 12px;font-size:.86rem;font-weight:500;color:var(--on-surface-var)}
 .chip[aria-pressed="true"]{background:var(--primary-container);border-color:transparent;color:var(--on-primary-container)}
 
