@@ -1,6 +1,38 @@
 {
- "updatedAt": "2026-11-23T13:47:18Z",
+ "updatedAt": "2026-11-24T06:46:10Z",
  "jobs": [
+  {
+   "id": "chcp-quality-improvement-compliance-administrator-hull-hu3-6b000535",
+   "title": "Quality Improvement and Compliance Administrator",
+   "employer": "City Health Care Partnership CIC (advertised via NHS Jobs)",
+   "location": "Hull, HU3 4AE",
+   "pay": "£25,760 to £27,476 a year",
+   "hours": "Full-time, fixed-term contract",
+   "category": "Admin & Clerical",
+   "closes": "2026-12-04",
+   "posted": "2026-11-20",
+   "url": "https://www.jobs.service.gov.uk/jobs/6b00053511e0a00921ace64b",
+   "source": "GOV.UK Find a Job",
+   "fit": "good",
+   "addedAt": "2026-11-24T06:52:00Z",
+   "why": "Band 3 fixed-term administrator supporting quality improvement and compliance in a Hull community health provider; full duties in the attached job description."
+  },
+  {
+   "id": "mersey-primary-academy-sen-support-officer-hull-hu8-7969",
+   "title": "SEN Support Officer (7969)",
+   "employer": "Mersey Primary Academy",
+   "location": "Hull, HU8 8TX",
+   "pay": "£30,515 - £33,119 FTE pro rata (from £19,438.71 actual)",
+   "hours": "Part-time, permanent, from January 2027",
+   "category": "Schools & SEN",
+   "closes": "2026-12-07",
+   "posted": "2026-11-23",
+   "url": "https://teaching-vacancies.service.gov.uk/jobs/sen-support-officer-7969",
+   "source": "Teaching Vacancies",
+   "fit": "good",
+   "addedAt": "2026-11-24T06:52:00Z",
+   "why": "Part-time SEN support officer at a Hull primary academy giving administrative support to the SENCO, tracking interventions and delivering intervention packages to pupils with SEND."
+  },
   {
    "id": "chcp-health-centre-receptionist-goole-dn14-6rp-6b03fabc",
    "title": "Health Centre Receptionist",
@@ -306,22 +338,6 @@
    "why": "Permanent part-time exams officer at a secondary academy near Hedon, planning and administering exams and invigilation; needs GCSE grade 5 English and Maths or equivalent, strong IT and organisation."
   },
   {
-   "id": "hull-trinity-house-academy-teaching-assistant-level-2-hull-7503",
-   "title": "Teaching Assistant Level 2 (7503)",
-   "employer": "Hull Trinity House Academy (Delta Academies Trust)",
-   "location": "Hull HU3 1UP",
-   "pay": "£26,847–£27,709 FTE pro rata (min. actual £20,373.03, Grade D)",
-   "hours": "32.5 hours per week, term time plus 5 days, permanent",
-   "category": "Schools & SEN",
-   "closes": "2026-11-23",
-   "posted": "2026-10-19",
-   "url": "https://teaching-vacancies.service.gov.uk/jobs/teaching-assistant-level-2-7503-hull-trinity-house-academy-hull",
-   "source": "Teaching Vacancies",
-   "fit": "good",
-   "addedAt": "2026-11-20T13:52:36Z",
-   "why": "Permanent part-time teaching assistant at a Hull secondary academy, supporting pupils' access to learning and helping manage the classroom; enhanced DBS required."
-  },
-  {
    "id": "beverley-st-nicholas-primary-teaching-assistant-level-2-beverley-eryc009964",
    "title": "Teaching Assistant Level 2 (2 posts, Year 6 EHCP)",
    "employer": "Beverley St Nicholas Primary School (Edukos Trust)",
@@ -496,22 +512,6 @@
    "fit": "strong",
    "addedAt": "2026-11-19T13:50:04Z",
    "why": "Full-time permanent NHS administration assistant post in Hull at Band 2 pay; full duties and person specification are in the job description attached to the advert, and the post may close early."
-  },
-  {
-   "id": "thoresby-primary-achievement-support-assistant-ks1-send-hull-hu5-0969e340",
-   "title": "Achievement Support Assistant (Grade 4, KS1 SEND support)",
-   "employer": "Thoresby Primary School",
-   "location": "Thoresby Street, Hull HU5 3RG",
-   "pay": "£19,429 - £20,052 a year (FTE)",
-   "hours": "32.5 hours/week, term time only, 8:30am-3:30pm; fixed term",
-   "category": "Schools & SEN",
-   "closes": "2026-11-23",
-   "posted": "2026-11-15",
-   "url": "https://teaching-vacancies.service.gov.uk/jobs/achievement-support-assistant-0969e340-6f7f-496d-a469-3d7d08aee95b",
-   "source": "Teaching Vacancies",
-   "fit": "good",
-   "addedAt": "2026-11-19T13:50:04Z",
-   "why": "Fixed-term, term-time teaching assistant post at a Hull primary school supporting a child with SEND in Key Stage 1 under teacher direction; enhanced DBS required and applications are via the school website (CVs not accepted)."
   },
   {
    "id": "barchester-activities-assistant-care-home-bridlington-96009129475",
@@ -690,22 +690,6 @@
    "why": "Fixed-term Level 3 teaching assistant at a Hedon primary school, supporting teachers, building relationships with children and managing behaviour; Level 3 qualification required."
   },
   {
-   "id": "the-marvell-college-human-resources-administrator-hull-hu9",
-   "title": "Human Resources Administrator",
-   "employer": "The Marvell College (Hull Collaborative Academy Trust)",
-   "location": "Hull HU9 4EE",
-   "pay": "£27,004 to £29,309 a year (actual)",
-   "hours": "Full time, term time plus 10 days, starts 7:15am; permanent",
-   "category": "Admin & Clerical",
-   "closes": "2026-11-23",
-   "posted": "2026-11-10",
-   "url": "https://teaching-vacancies.service.gov.uk/jobs/human-resources-administrator-the-marvell-college",
-   "source": "Teaching Vacancies",
-   "fit": "good",
-   "addedAt": "2026-11-19T06:50:04Z",
-   "why": "Full-time permanent HR administrator at an 11-16 academy in east Hull, organising planned and last-minute staff cover and producing documents in Microsoft Office; needs strong admin skills and an enhanced DBS."
-  },
-  {
    "id": "the-sullivan-centre-attendance-officer-hull-hu3-37cf22c8",
    "title": "Attendance Officer",
    "employer": "The Sullivan Centre",
@@ -882,22 +866,6 @@
    "why": "Support worker in a Voyage Care residential service helping people with complex needs gain independence, with personal care and community activities; full UK driving licence required and rota includes night shifts."
   },
   {
-   "id": "bridlington-school-receptionist-bridlington-eryc009891",
-   "title": "Receptionist (part time)",
-   "employer": "Bridlington School",
-   "location": "Bridlington YO16 4QU",
-   "pay": "£9,304 per year (actual, part time)",
-   "hours": "Part time (14.5 hours per week), permanent",
-   "category": "Admin & Clerical",
-   "closes": "2026-11-23",
-   "posted": "2026-11-09",
-   "url": "https://teaching-vacancies.service.gov.uk/jobs/receptionist-bridlington-school",
-   "source": "Teaching Vacancies",
-   "fit": "good",
-   "addedAt": "2026-11-18T06:51:00Z",
-   "why": "Part-time school receptionist, first point of contact for visitors and parents with general admin across the school; training provided, first aid training and enhanced DBS required."
-  },
-  {
    "id": "cottingham-high-school-attendance-officer-cottingham",
    "title": "Attendance Officer (maternity cover)",
    "employer": "Cottingham High School (The Consortium Academy Trust)",
@@ -992,22 +960,6 @@
    "fit": "stretch",
    "addedAt": "2026-11-18T06:51:00Z",
    "why": "Small-hours support worker taking an autistic person to community activities and giving emotional support; own car required, autism experience preferred."
-  },
-  {
-   "id": "headlands-school-support-services-assistant-bridlington-eryc009907",
-   "title": "Support Services Assistant (school office)",
-   "employer": "Headlands School (East Riding of Yorkshire Council)",
-   "location": "Sewerby Road, Bridlington YO16 6UR",
-   "pay": "£23,668 - £24,050 per year (Grade 4A, term-time pro rata)",
-   "hours": "37 hours per week, Mon-Fri (part time considered), permanent",
-   "category": "Admin & Clerical",
-   "closes": "2026-11-23",
-   "posted": "",
-   "url": "https://www.eastridingcouncil.jobs/job-search/?entry=eryc009907",
-   "source": "East Riding Council Jobs",
-   "fit": "stretch",
-   "addedAt": "2026-11-18T06:51:00Z",
-   "why": "Secondary school support services assistant in the main office, covering HR admin, records, typing and filing; recent office experience and Microsoft Office skills required."
   },
   {
    "id": "kingsway-primary-learning-assistant-goole-eryc009912",
@@ -1136,22 +1088,6 @@
    "fit": "stretch",
    "addedAt": "2026-11-17T13:47:46Z",
    "why": "Part-time Band 3 administrator managing patient monies, petty cash and patient shop stock in forensic inpatient services; needs finance-system knowledge, Excel, advanced keyboard skills and GCSE English and Maths."
-  },
-  {
-   "id": "thoresby-primary-achievement-support-assistant-hull-hu5-46fe95e7",
-   "title": "Achievement Support Assistant (fixed term)",
-   "employer": "Thoresby Primary School",
-   "location": "Hull, HU5 3RG",
-   "pay": "£19,429 - £20,052 a year (actual)",
-   "hours": "32.5 hours a week, 8:30am-3:30pm, term time only, fixed term",
-   "category": "Schools & SEN",
-   "closes": "2026-11-23",
-   "posted": "2026-11-16",
-   "url": "https://teaching-vacancies.service.gov.uk/jobs/achievement-support-assistant-46fe95e7-f424-487b-b306-a90ce14952e7",
-   "source": "Teaching Vacancies",
-   "fit": "good",
-   "addedAt": "2026-11-17T13:47:46Z",
-   "why": "Fixed-term KS2 teaching assistant role supporting pupils' learning and wellbeing under teacher direction, term time only; needs an enhanced DBS, applications via the school website (no CVs)."
   },
   {
    "id": "care-uk-senior-care-assistant-primrose-house-brough-96009129188",
@@ -1296,22 +1232,6 @@
    "fit": "strong",
    "addedAt": "2026-11-16T13:51:37Z",
    "why": "Agency HCA and senior HCA shifts across care homes around Welton; at least 6 months' UK care experience is needed, and NVQ Level 3 and medication experience are preferred for senior shifts."
-  },
-  {
-   "id": "change-grow-live-data-administrator-hull-hu3",
-   "title": "Data Administrator",
-   "employer": "Change Grow Live (ReNew Hull)",
-   "location": "Hull HU3 1XH",
-   "pay": "From £26,296.03 a year, pro rata",
-   "hours": "Full time, 37.5 hours per week, permanent",
-   "category": "Health Data & Digital",
-   "closes": "2026-11-23",
-   "posted": "2026-11-10",
-   "url": "https://www.jobs.service.gov.uk/jobs/6af353935ddccbfd399eaf3f",
-   "source": "GOV.UK Find a Job",
-   "fit": "good",
-   "addedAt": "2026-11-16T06:54:19Z",
-   "why": "Permanent data administrator in a Hull drug and alcohol recovery service, keeping accurate client records for national (NDTMS) reporting and producing regular data reports; needs office admin experience and strong Word, Excel and Access skills."
   },
   {
    "id": "gp-practice-care-navigator-beeford-yo25",
@@ -1618,38 +1538,6 @@
    "why": "Learning support assistant at a secondary school in Howden, supporting pupils with SEN through in-class help and literacy/numeracy interventions."
   },
   {
-   "id": "hull-trinity-house-academy-cover-supervisor-hull-7855",
-   "title": "Cover Supervisor (7855)",
-   "employer": "Hull Trinity House Academy",
-   "location": "Hull HU3 1UP",
-   "pay": "£28,153–£30,023 FTE (min. actual pro rata £21,364.10)",
-   "hours": "Part time, fixed term from January 2027",
-   "category": "Schools & SEN",
-   "closes": "2026-11-23",
-   "posted": "2026-11-09",
-   "url": "https://teaching-vacancies.service.gov.uk/jobs/cover-supervisor-7855",
-   "source": "Teaching Vacancies",
-   "fit": "good",
-   "addedAt": "2026-11-14T17:27:00Z",
-   "why": "Part-time cover supervisor at a Hull secondary academy, supervising classes and supporting students with set work; ICT literacy needed."
-  },
-  {
-   "id": "neasden-primary-school-hlta-hull",
-   "title": "Higher Level Teaching Assistant",
-   "employer": "Neasden Primary School",
-   "location": "Hull",
-   "pay": "£18,558–£19,982 actual (£37,562–£40,444 FTE as listed)",
-   "hours": "21 hours per week over 3 days, 08:15–15:45, fixed term to Aug 2027",
-   "category": "Schools & SEN",
-   "closes": "2026-11-23",
-   "posted": "2026-11-13",
-   "url": "https://teaching-vacancies.service.gov.uk/jobs/higher-level-teaching-assistant-neasden-primary-school-hull",
-   "source": "Teaching Vacancies",
-   "fit": "stretch",
-   "addedAt": "2026-11-14T17:27:00Z",
-   "why": "Part-time HLTA at a Hull primary school delivering learning activities and supporting behaviour and SEN plans; HLTA status or QTS required."
-  },
-  {
    "id": "tw-recruitment-teaching-assistant-hull-238739",
    "title": "Teaching Assistant (daily supply)",
    "employer": "TW Recruitment",
@@ -1664,38 +1552,6 @@
    "fit": "good",
    "addedAt": "2026-11-14T17:27:00Z",
    "why": "Daily supply teaching assistant work in Hull schools through an education agency."
-  },
-  {
-   "id": "tweendykes-school-level-1-teaching-assistant-hull",
-   "title": "Level 1 Teaching Assistant",
-   "employer": "Tweendykes School",
-   "location": "Hull",
-   "pay": "£13.48–£13.70 per hour (£4,540–£4,612 actual)",
-   "hours": "7.5 hours per week, Mon–Fri 12:00–13:30, fixed term to July 2027",
-   "category": "Schools & SEN",
-   "closes": "2026-11-23",
-   "posted": "2026-11-13",
-   "url": "https://teaching-vacancies.service.gov.uk/jobs/level-1-teaching-assistant-tweendykes-school-hull",
-   "source": "Teaching Vacancies",
-   "fit": "good",
-   "addedAt": "2026-11-14T17:27:00Z",
-   "why": "Part-time lunchtime teaching assistant at a Hull special school, supporting pupils with SEN, disabilities and health needs including personal care."
-  },
-  {
-   "id": "wolfreton-school-cover-supervisor-kirk-ella-hu10",
-   "title": "Cover Supervisor",
-   "employer": "Wolfreton School and Sixth Form College",
-   "location": "Kirk Ella, Hull HU10 6HB",
-   "pay": "£19,939 actual (SCP 8; £27,709 FTE)",
-   "hours": "31.25 hours per week, Mon–Fri, term time only, fixed term",
-   "category": "Schools & SEN",
-   "closes": "2026-11-23",
-   "posted": "2026-11-06",
-   "url": "https://teaching-vacancies.service.gov.uk/jobs/cover-supervisor-e1b3d93d-6941-4294-ba2b-b7a9135beff1",
-   "source": "Teaching Vacancies",
-   "fit": "good",
-   "addedAt": "2026-11-14T17:27:00Z",
-   "why": "Cover supervisor at a secondary school in Kirk Ella, running classes with set work and supporting students' behaviour; training given."
   },
   {
    "id": "bupa-care-homes-care-assistant-hull-hu9-4uw-r1197728",
@@ -2946,22 +2802,6 @@
    "why": "Waking night support for people with a learning disability at home: checks, toileting, light household tasks and records; enhanced DBS and references, must already have right to work."
   },
   {
-   "id": "north-frodingham-primary-teaching-assistant-driffield-eryc009818",
-   "title": "Teaching Assistant (maternity cover)",
-   "employer": "North Frodingham Primary School (East Riding of Yorkshire Council)",
-   "location": "North Frodingham, Driffield YO25 8LA",
-   "pay": "£18,509 - £18,804 per year (Grade 3B, term-time pro rata)",
-   "hours": "30 hours per week, Mon-Fri, fixed term to Jul/Aug 2027",
-   "category": "Schools & SEN",
-   "closes": "2026-11-23",
-   "posted": "",
-   "url": "https://www.eastridingcouncil.jobs/job-search/?location=Bridlington+and+Driffield%2Fentry-not-found&entry=eryc009818",
-   "source": "East Riding Council Jobs",
-   "fit": "good",
-   "addedAt": "2026-11-14T16:50:13Z",
-   "why": "General class support across key stages plus 1:1 support for a child with an EHCP; NVQ Level 2 desirable not required, enhanced DBS and references."
-  },
-  {
    "id": "pcn-care-coordinator-hull-hu9-6af5ce60",
    "title": "PCN Care Coordinator",
    "employer": "Hull GP Primary Care Network (name not given; via NHS Jobs)",
@@ -3186,22 +3026,6 @@
    "why": "1:1 and 2:1 complex care for adults and children with autism, brain injury and mental health needs, including nights; full UK driving licence and substantial care experience required."
   },
   {
-   "id": "all-saints-ce-junior-academy-senior-behaviour-wellbeing-assistant-hessle",
-   "title": "Senior Behaviour & Wellbeing Assistant - MAT Cover",
-   "employer": "All Saints Church of England Junior Academy",
-   "location": "Hessle, HU13 9JD",
-   "pay": "£22,326–£23,418 actual (FTE £27,274–£28,608)",
-   "hours": "35 hours per week, Mon–Fri 8:30am–4pm, term time only",
-   "category": "Schools & SEN",
-   "closes": "2026-11-23",
-   "posted": "2026-11-03",
-   "url": "https://teaching-vacancies.service.gov.uk/jobs/senior-behaviour-wellbeing-assistant-mat-cover",
-   "source": "Teaching Vacancies",
-   "fit": "good",
-   "addedAt": "2026-11-14T16:28:00Z",
-   "why": "Maternity cover (from Jan 2027) running 1:1 and group wellbeing interventions and supporting behaviour for learning alongside the DSL; enhanced DBS required."
-  },
-  {
    "id": "barchester-bank-care-assistant-beverley-1571925831",
    "title": "Care Assistant - Bank - Care Home",
    "employer": "Barchester Healthcare Ltd",
@@ -3410,22 +3234,6 @@
    "why": "Bank care assistant in a Beverley home offering residential and memory-impairment care; care experience required."
   },
   {
-   "id": "creative-support-relief-extra-care-support-worker-hull-97093",
-   "title": "Relief Extra Care Support Worker",
-   "employer": "Creative Support",
-   "location": "Hull (Extra Care service)",
-   "pay": "From £13.45 per hour, paid weekly",
-   "hours": "Relief/bank: days, evenings, weekends, sleep-ins",
-   "category": "Care & Support",
-   "closes": "2026-11-23",
-   "posted": "2026-11-06",
-   "url": "https://www.jobs.service.gov.uk/jobs/6aee0876756455ed4a259f30",
-   "source": "GOV.UK Find a Job",
-   "fit": "strong",
-   "addedAt": "2026-11-14T16:28:00Z",
-   "why": "Relief support for older adults in a Hull extra care scheme; 12 months UK care experience essential, quote ref 97093."
-  },
-  {
    "id": "custom-links-support-worker-care-assistant-hull-6ae0d31b",
    "title": "Support Worker / Care Assistant",
    "employer": "Custom Links Care Ltd",
@@ -3490,22 +3298,6 @@
    "why": "Specialist TA at a special school for pupils with severe physical disabilities and complex needs, including personal and medical care; training provided."
   },
   {
-   "id": "hull-trinity-house-academy-teaching-assistant-level-2-hull-7856",
-   "title": "Teaching Assistant Level 2 (7856)",
-   "employer": "Hull Trinity House Academy (Delta Academies Trust)",
-   "location": "Beverley Road, Hull, HU3 1UP",
-   "pay": "£26,847–£27,709 FTE pro rata (from £20,373.03 actual, Grade D)",
-   "hours": "Part time",
-   "category": "Schools & SEN",
-   "closes": "2026-11-23",
-   "posted": "2026-11-09",
-   "url": "https://teaching-vacancies.service.gov.uk/jobs/teaching-assistant-level-2-7856",
-   "source": "Teaching Vacancies",
-   "fit": "good",
-   "addedAt": "2026-11-14T16:28:00Z",
-   "why": "Two permanent secondary TA posts supporting pupils' access to learning, starting January 2027."
-  },
-  {
    "id": "liberty-academy-advanced-teaching-assistant-hull",
    "title": "Advanced Teaching Assistant",
    "employer": "Liberty Academy",
@@ -3520,22 +3312,6 @@
    "fit": "good",
    "addedAt": "2026-11-14T16:28:00Z",
    "why": "Fixed-term TA line-managed by the SENCO, helping plan learning and supervising groups or individual pupils."
-  },
-  {
-   "id": "nhs-healthcare-assistant-beverley-hu16-0fa-6af1d2b4",
-   "title": "Healthcare Assistant",
-   "employer": "NHS employer (advertised via NHS Jobs)",
-   "location": "Beverley HU16 0FA",
-   "pay": "From £25,272 a year",
-   "hours": "Full time, permanent",
-   "category": "Healthcare Assistant",
-   "closes": "2026-11-23",
-   "posted": "2026-11-09",
-   "url": "https://www.jobs.service.gov.uk/jobs/6af1d2b4d90dd1b95e8d6e41",
-   "source": "GOV.UK Find a Job",
-   "fit": "strong",
-   "addedAt": "2026-11-14T16:28:00Z",
-   "why": "Permanent NHS healthcare assistant post; details in the job description on NHS Jobs."
   },
   {
    "id": "northern-angels-care-assistant-driffield-96009126153",
