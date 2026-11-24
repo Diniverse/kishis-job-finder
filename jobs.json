@@ -1,6 +1,38 @@
 {
- "updatedAt": "2026-11-24T06:46:10Z",
+ "updatedAt": "2026-11-24T13:46:10Z",
  "jobs": [
+  {
+   "id": "huth-senior-healthcare-support-worker-hri-6b0571da",
+   "title": "Senior Healthcare Support Worker",
+   "employer": "Hull University Teaching Hospitals NHS Trust (advertised via NHS Jobs)",
+   "location": "Hull Royal Infirmary, Hull HU3 2JZ",
+   "pay": "£25,760 to £27,476 a year (Band 3)",
+   "hours": "Full-time, permanent",
+   "category": "Healthcare Assistant",
+   "closes": "2026-12-08",
+   "posted": "2026-11-24",
+   "url": "https://www.jobs.service.gov.uk/jobs/6b0571dadbc8ab84eb57a0c9",
+   "source": "GOV.UK Find a Job",
+   "fit": "strong",
+   "addedAt": "2026-11-24T13:50:00Z",
+   "why": "Band 3 senior healthcare support worker at Hull Royal Infirmary; ward and duties in the attached job description, and the advert may close early if there is high interest."
+  },
+  {
+   "id": "dorchester-primary-achievement-support-assistant-sen-unit-hull-hu7",
+   "title": "Achievement Support Assistant (SEN Unit)",
+   "employer": "Dorchester Primary School",
+   "location": "Hull, HU7 6AH",
+   "pay": "£26,427 - £27,274 FTE (actual £19,429 - £20,052)",
+   "hours": "32.5 hrs/week, Mon-Fri 8:30-3:30, fixed term for this academic year, start 4 Jan 2027",
+   "category": "Schools & SEN",
+   "closes": "2026-11-30",
+   "posted": "2026-11-17",
+   "url": "https://teaching-vacancies.service.gov.uk/jobs/achievement-support-assistant-working-in-the-sen-unit",
+   "source": "Teaching Vacancies",
+   "fit": "good",
+   "addedAt": "2026-11-24T13:50:00Z",
+   "why": "Fixed-term teaching assistant in a primary school SEND unit supporting pupils with additional and complex needs, especially communication and interaction difficulties."
+  },
   {
    "id": "chcp-quality-improvement-compliance-administrator-hull-hu3-6b000535",
    "title": "Quality Improvement and Compliance Administrator",
