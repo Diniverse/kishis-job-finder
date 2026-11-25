@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-24T13:46:10Z",
+ "updatedAt": "2026-11-25T06:44:25Z",
  "jobs": [
   {
    "id": "huth-senior-healthcare-support-worker-hri-6b0571da",
@@ -528,22 +528,6 @@
    "fit": "good",
    "addedAt": "2026-11-19T13:50:04Z",
    "why": "Full-time GP practice care navigator/receptionist in west Hull: greeting and directing patients by phone and in person, appointments, new patient registrations, record updates and repeat prescription requests."
-  },
-  {
-   "id": "nhs-administration-assistant-hull-hu3-2rt-6af3271c",
-   "title": "Administration Assistant",
-   "employer": "NHS employer (advertised via NHS Jobs)",
-   "location": "Hull HU3 2RT",
-   "pay": "From £25,272 a year",
-   "hours": "Full time, permanent",
-   "category": "Admin & Clerical",
-   "closes": "2026-11-24",
-   "posted": "2026-11-10",
-   "url": "https://www.jobs.service.gov.uk/jobs/6af3271c57f727c85b14808f",
-   "source": "GOV.UK Find a Job",
-   "fit": "strong",
-   "addedAt": "2026-11-19T13:50:04Z",
-   "why": "Full-time permanent NHS administration assistant post in Hull at Band 2 pay; full duties and person specification are in the job description attached to the advert, and the post may close early."
   },
   {
    "id": "barchester-activities-assistant-care-home-bridlington-96009129475",
@@ -1552,22 +1536,6 @@
    "fit": "strong",
    "addedAt": "2026-11-14T17:27:00Z",
    "why": "Senior carer role in a Hull residential care home on 07:45–20:00 shifts; previous care experience required."
-  },
-  {
-   "id": "howden-school-learning-support-assistant-howden",
-   "title": "Learning Support Assistant",
-   "employer": "Howden School",
-   "location": "Howden, near Goole",
-   "pay": "£19,142 actual (SCP 8; £27,709 FTE)",
-   "hours": "Mon–Fri 08:30–15:00, term time only, permanent",
-   "category": "Schools & SEN",
-   "closes": "2026-11-24",
-   "posted": "2026-09-23",
-   "url": "https://teaching-vacancies.service.gov.uk/jobs/learning-support-assistant-1fc16c7b-4a98-4a7b-9a71-98d62093470b",
-   "source": "Teaching Vacancies",
-   "fit": "good",
-   "addedAt": "2026-11-14T17:27:00Z",
-   "why": "Learning support assistant at a secondary school in Howden, supporting pupils with SEN through in-class help and literacy/numeracy interventions."
   },
   {
    "id": "tw-recruitment-teaching-assistant-hull-238739",
@@ -2658,70 +2626,6 @@
    "why": "Agency shifts in care homes, nursing homes, home care and supported living giving personal care, mobility and meal support; DBS required, care experience and qualifications desirable not essential."
   },
   {
-   "id": "huth-administrator-cottingham-castle-hill-6af303cf",
-   "title": "Administrator (Band 2)",
-   "employer": "Hull University Teaching Hospitals NHS Trust",
-   "location": "Cottingham HU16 5JQ (Castle Hill Hospital / HRI teams)",
-   "pay": "£25,272 per annum pro rata (Band 2)",
-   "hours": "Full-time, shifts between 08:00-20:00",
-   "category": "Admin & Clerical",
-   "closes": "2026-11-24",
-   "posted": "2026-11-10",
-   "url": "https://www.jobs.service.gov.uk/jobs/6af303cf57f727c85b0fa9d4",
-   "source": "GOV.UK Find a Job (jobs.service.gov.uk)",
-   "fit": "strong",
-   "addedAt": "2026-11-14T16:50:13Z",
-   "why": "Band 2 admin organising clinic lists, supporting appointments and speaking with patients by phone; basic IT/typing and data entry skills, training provided."
-  },
-  {
-   "id": "huth-administrator-hub-4-hri-20hrs-6af326f4",
-   "title": "Administrator – HUB 4 (20 hrs)",
-   "employer": "Hull University Teaching Hospitals NHS Trust",
-   "location": "Hull HU3 2JZ (HUB 4, Hull Royal Infirmary)",
-   "pay": "£25,272 pro rata per annum (Band 2)",
-   "hours": "Part-time, 20 hours/week",
-   "category": "Admin & Clerical",
-   "closes": "2026-11-24",
-   "posted": "2026-11-10",
-   "url": "https://www.jobs.service.gov.uk/jobs/6af326f457f727c85b147bdc",
-   "source": "GOV.UK Find a Job (jobs.service.gov.uk)",
-   "fit": "strong",
-   "addedAt": "2026-11-14T16:50:13Z",
-   "why": "Band 2 outpatient hub administrator coordinating workloads and supporting patients by phone and in person; basic IT/typing and data entry skills needed."
-  },
-  {
-   "id": "huth-administrator-hub-4-hri-30hrs-6af326f5",
-   "title": "Administrator – HUB 4 (30 hrs)",
-   "employer": "Hull University Teaching Hospitals NHS Trust",
-   "location": "Hull HU3 2JZ (HUB 4, Hull Royal Infirmary)",
-   "pay": "£25,272 pro rata per annum (Band 2)",
-   "hours": "Part-time, 30 hours/week",
-   "category": "Admin & Clerical",
-   "closes": "2026-11-24",
-   "posted": "2026-11-10",
-   "url": "https://www.jobs.service.gov.uk/jobs/6af326f557f727c85b147be8",
-   "source": "GOV.UK Find a Job (jobs.service.gov.uk)",
-   "fit": "strong",
-   "addedAt": "2026-11-14T16:50:13Z",
-   "why": "Band 2 outpatient hub administrator coordinating workloads and supporting patients by phone and in person; basic IT/typing and data entry skills, no NHS experience required."
-  },
-  {
-   "id": "huth-administrator-hull-royal-infirmary-6af303ce",
-   "title": "Administrator (Band 2)",
-   "employer": "Hull University Teaching Hospitals NHS Trust",
-   "location": "Hull HU3 2JZ (Hull Royal Infirmary)",
-   "pay": "£25,272 pro rata per annum (Band 2)",
-   "hours": "Part-time",
-   "category": "Admin & Clerical",
-   "closes": "2026-11-24",
-   "posted": "2026-11-10",
-   "url": "https://www.jobs.service.gov.uk/jobs/6af303ce57f727c85b0fa9a9",
-   "source": "GOV.UK Find a Job (jobs.service.gov.uk)",
-   "fit": "strong",
-   "addedAt": "2026-11-14T16:50:13Z",
-   "why": "Band 2 admin supporting clinical teams, coordinating workloads and handling patient calls; basic IT/typing and data entry skills needed, no NHS experience required (advert body says closes 24 Nov; listing table says 12 Dec)."
-  },
-  {
    "id": "huth-clinical-support-worker-acute-assessment-unit-167ea764",
    "title": "Clinical Support Worker – Acute Assessment Unit (Band 3)",
    "employer": "Hull University Teaching Hospitals NHS Trust",
@@ -2752,22 +2656,6 @@
    "fit": "good",
    "addedAt": "2026-11-14T16:50:13Z",
    "why": "Band 3-pay recruitment admin for doctors: advertising posts, arranging interviews, chasing pre-employment checks and issuing contracts; requirements in attached person spec."
-  },
-  {
-   "id": "huth-senior-administrator-womens-childrens-hospital-600be077",
-   "title": "Senior Administrator (Band 3)",
-   "employer": "Hull University Teaching Hospitals NHS Trust",
-   "location": "Women's and Children's Hospital, Hull (listed as Cottingham)",
-   "pay": "£25,760 - £27,476 per year (Band 3)",
-   "hours": "37.5 hours/week, Mon-Fri 08:30-17:00",
-   "category": "Admin & Clerical",
-   "closes": "2026-11-24",
-   "posted": "2026-11-10",
-   "url": "https://www.jobclerk.com/job/senior-administrator/600be077-d748-44de-9e1e-d1bd3a1a0c97",
-   "source": "jobclerk.com",
-   "fit": "good",
-   "addedAt": "2026-11-14T16:50:13Z",
-   "why": "Band 3 senior admin coordinating complex workloads and keeping clinics running; GCSE Maths and English and excellent keyboard skills essential, plus customer service and MS Office experience."
   },
   {
    "id": "huth-senior-health-care-support-worker-frailty-hri-6af481d0",
@@ -2960,22 +2848,6 @@
    "fit": "good",
    "addedAt": "2026-11-14T16:50:13Z",
    "why": "1:1 and small-group support for learners aged 3-19 with complex medical needs and severe learning difficulties, including personal care (feeding, changing); no formal qualification required but GCSE English/Maths, willingness to train and enhanced DBS needed."
-  },
-  {
-   "id": "the-cambian-group-residential-childcare-worker-hull-hu5-3et",
-   "title": "Residential Childcare Worker",
-   "employer": "The Cambian Group",
-   "location": "Hull HU5 3ET",
-   "pay": "£12.86-£13.50/hr + sleep-in enhancement",
-   "hours": "Full time rota incl. sleep-ins and weekends",
-   "category": "Care & Support",
-   "closes": "2026-11-24",
-   "posted": "2026-10-26",
-   "url": "https://www.jobs.service.gov.uk/jobs/6adf4319b535da8c535ac7f4",
-   "source": "jobs.service.gov.uk (DWP Work Hub)",
-   "fit": "strong",
-   "addedAt": "2026-11-14T16:50:13Z",
-   "why": "Trauma-informed care for young people aged 11-18 in a therapeutic children's home including medication and records; experience with vulnerable young people essential, Level 3 Residential Childcare desirable, licence preferred."
   },
   {
    "id": "vision-for-education-tutor-goole",
@@ -3552,38 +3424,6 @@
    "fit": "strong",
    "addedAt": "2026-11-14T15:30:00Z",
    "why": "Pharmacy assistant and dispenser role in a community pharmacy on Newland Avenue."
-  },
-  {
-   "id": "humber-admin-assistant-miranda-house-8395534",
-   "title": "Administration Assistant – Mental Health Crisis Team",
-   "employer": "Humber Teaching NHS Foundation Trust",
-   "location": "Miranda House, Hull",
-   "pay": "£25,272 a year (Band 2)",
-   "hours": "37.5 hrs, rota with unsocial-hours pay",
-   "category": "Admin & Clerical",
-   "closes": "2026-11-24",
-   "posted": "2026-11-10",
-   "url": "https://www.healthjobsuk.com/job/UK/East_Yorkshire/Hull/Humber_Teaching_NHS_Foundation_Trust/Mental_health/Mental_health-v8395534",
-   "source": "Healthjobs UK",
-   "fit": "strong",
-   "addedAt": "2026-11-14T15:30:00Z",
-   "why": "Reception, patient queries and entering patient data into SystmOne; keyboard and Microsoft Office skills needed."
-  },
-  {
-   "id": "humber-facilities-data-admin-8425939",
-   "title": "Facilities Information Data Administrator",
-   "employer": "Humber Teaching NHS Foundation Trust",
-   "location": "Hull",
-   "pay": "£32,073–£39,043 a year (Band 5)",
-   "hours": "37.5 hrs, permanent",
-   "category": "Health Data & Digital",
-   "closes": "2026-11-24",
-   "posted": "2026-11-10",
-   "url": "https://www.healthjobsuk.com/job/UK/East_Yorkshire/HULL/Humber_Teaching_NHS_Foundation_Trust/Estates_Facilities_Information_Management/Estates_Facilities_Information_Management-v8425939",
-   "source": "Healthjobs UK",
-   "fit": "stretch",
-   "addedAt": "2026-11-14T15:30:00Z",
-   "why": "Maintaining facilities data, reports and Power BI dashboards; relevant degree or data-admin experience required."
   },
   {
    "id": "superdrug-dispenser-whitefriargate",
