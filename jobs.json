@@ -1,6 +1,22 @@
 {
- "updatedAt": "2026-11-25T06:44:25Z",
+ "updatedAt": "2026-11-25T13:45:46Z",
  "jobs": [
+  {
+   "id": "huth-healthcare-support-worker-ward-5-rheumatology-hri-6b06be92",
+   "title": "Senior Healthcare Support Worker – Ward 5 Rheumatology",
+   "employer": "Hull University Teaching Hospitals NHS Trust",
+   "location": "Hull Royal Infirmary, Hull HU3 2JZ",
+   "pay": "£25,760 - £27,476 per annum (pro rata if part-time)",
+   "hours": "Full-time or part-time, permanent; rotating days, nights and weekends",
+   "category": "Healthcare Assistant",
+   "closes": "2026-12-09",
+   "posted": "2026-11-25",
+   "url": "https://www.jobs.service.gov.uk/jobs/6b06be92dbc8ab84eb7e9623",
+   "source": "GOV.UK Find a Job",
+   "fit": "strong",
+   "addedAt": "2026-11-25T13:50:00Z",
+   "why": "Healthcare support worker on a hospital rheumatology ward supporting registered nurses with direct patient care, full or part time, on a rotating days, nights and weekends pattern."
+  },
   {
    "id": "huth-senior-healthcare-support-worker-hri-6b0571da",
    "title": "Senior Healthcare Support Worker",
