@@ -1,6 +1,54 @@
 {
- "updatedAt": "2026-11-25T13:45:46Z",
+ "updatedAt": "2026-11-26T06:45:44Z",
  "jobs": [
+  {
+   "id": "skills-4-pharmacy-pharmacy-assistant-apprenticeship-beverley-6b0718ec",
+   "title": "Pharmacy Assistant Apprenticeship",
+   "employer": "Skills 4 Pharmacy (Beverley pharmacy)",
+   "location": "Beverley, HU17 9AA",
+   "pay": "£20,800 a year",
+   "hours": "Full-time apprenticeship",
+   "category": "Pharmacy",
+   "closes": "2026-12-18",
+   "posted": "2026-11-25",
+   "url": "https://www.jobs.service.gov.uk/jobs/6b0718ecf4e9f3c42723ff34",
+   "source": "GOV.UK Find a Job",
+   "fit": "good",
+   "addedAt": "2026-11-26T06:52:00Z",
+   "why": "Full-time pharmacy assistant apprenticeship in Beverley covering the medicines counter, prescription preparation under supervision, stock control and records, with full training and no previous pharmacy experience needed."
+  },
+  {
+   "id": "gp-practice-receptionist-anlaby-hu10-7jr-6b071054",
+   "title": "Receptionist",
+   "employer": "GP practice in Anlaby (advertised via NHS Jobs)",
+   "location": "Anlaby, HU10 7JR",
+   "pay": "From £12.89 an hour",
+   "hours": "Full-time, permanent",
+   "category": "Admin & Clerical",
+   "closes": "2026-12-23",
+   "posted": "2026-11-25",
+   "url": "https://www.jobs.service.gov.uk/jobs/6b0710543940099fbb3b8fcd",
+   "source": "GOV.UK Find a Job",
+   "fit": "strong",
+   "addedAt": "2026-11-26T06:52:00Z",
+   "why": "GP practice receptionist greeting patients, answering calls, supporting a total-triage and online consultation system, booking appointments and keeping patient records on EMIS Web."
+  },
+  {
+   "id": "chcp-integrated-ciss-worker-carers-support-hull-hu4-6b071099",
+   "title": "Integrated CISS Worker (Carers Information & Support Service)",
+   "employer": "City Health Care Partnership CIC",
+   "location": "Hull, HU4 6BH",
+   "pay": "£28,392 - £31,157 pa/pr",
+   "hours": "Part-time, permanent",
+   "category": "Care & Support",
+   "closes": "2026-12-09",
+   "posted": "2026-11-25",
+   "url": "https://www.jobs.service.gov.uk/jobs/6b071099f4e9f3c427232c69",
+   "source": "GOV.UK Find a Job",
+   "fit": "stretch",
+   "addedAt": "2026-11-26T06:52:00Z",
+   "why": "Band 4 part-time caseworker in a carers information and support service completing carers assessments and support plans, managing referrals and Carers Direct Payments; NVQ Level 3 or equivalent and assessment experience required."
+  },
   {
    "id": "huth-healthcare-support-worker-ward-5-rheumatology-hri-6b06be92",
    "title": "Senior Healthcare Support Worker – Ward 5 Rheumatology",
@@ -418,22 +466,6 @@
    "why": "Night senior care assistant at a care home in Cherry Burton providing personal care and supervising junior staff; NVQ Level 3 or working towards it, senior care experience, and a driving licence with own vehicle required."
   },
   {
-   "id": "chcp-speech-language-therapy-support-worker-hull-hu7-5dd-6afd8d77",
-   "title": "Speech and Language Therapy Support Worker",
-   "employer": "City Health Care Partnership CIC",
-   "location": "Hull HU7 5DD (East Riding SLT Service)",
-   "pay": "£25,760 - £27,476 pa/pr",
-   "hours": "Full time",
-   "category": "Healthcare Assistant",
-   "closes": "2026-11-25",
-   "posted": "2026-11-18",
-   "url": "https://www.jobs.service.gov.uk/jobs/6afd8d779df92eac475c293a",
-   "source": "GOV.UK Find a Job",
-   "fit": "good",
-   "addedAt": "2026-11-20T06:53:30Z",
-   "why": "Speech and language therapy support worker for adults with communication and swallowing difficulties, combining admin with delegated clinical tasks; NVQ Level 3 or equivalent experience and good digital skills required."
-  },
-  {
    "id": "dewcare-healthcare-assistant-support-worker-hull-hu9-1qa-6aff113c",
    "title": "Healthcare Assistant & Support Worker",
    "employer": "DEWCARE Recruitment UK Ltd",
@@ -690,38 +722,6 @@
    "why": "Band 3 part-time admin post supporting a mental health prevention and recovery team based at Goole: letters, reports, minutes, phones, reception cover and file management; needs Office 365 skills, typing qualification and transport between sites."
   },
   {
-   "id": "inmans-primary-level-2-teaching-assistant-hedon-eryc009945",
-   "title": "Level 2 Teaching Assistant (autism support)",
-   "employer": "Inmans Primary School (East Riding of Yorkshire Council)",
-   "location": "Hedon HU12 8NL",
-   "pay": "£23,564 to £23,945 a year (Grade 4A, term-time pro rata)",
-   "hours": "Part time, Mon-Fri, term time; fixed term to 31 August 2027",
-   "category": "Schools & SEN",
-   "closes": "2026-11-25",
-   "posted": "",
-   "url": "https://www.eastridingcouncil.jobs/job-search/?entry=ERYC009945",
-   "source": "East Riding Council jobs",
-   "fit": "good",
-   "addedAt": "2026-11-19T06:50:04Z",
-   "why": "Part-time fixed-term Level 2 teaching assistant at a Hedon primary school, supporting children with autism and associated behavioural needs; enhanced DBS and medical clearance required."
-  },
-  {
-   "id": "inmans-primary-level-3-teaching-assistant-hedon-eryc009939",
-   "title": "Level 3 Teaching Assistant",
-   "employer": "Inmans Primary School (East Riding of Yorkshire Council)",
-   "location": "Hedon HU12 8NL",
-   "pay": "£24,332 to £24,726 a year (Grade 4B, term-time pro rata)",
-   "hours": "Mon-Thu, term time; fixed term to 31 August 2027",
-   "category": "Schools & SEN",
-   "closes": "2026-11-25",
-   "posted": "",
-   "url": "https://www.eastridingcouncil.jobs/job-search/?entry=ERYC009939",
-   "source": "East Riding Council jobs",
-   "fit": "stretch",
-   "addedAt": "2026-11-19T06:50:04Z",
-   "why": "Fixed-term Level 3 teaching assistant at a Hedon primary school, supporting teachers, building relationships with children and managing behaviour; Level 3 qualification required."
-  },
-  {
    "id": "the-sullivan-centre-attendance-officer-hull-hu3-37cf22c8",
    "title": "Attendance Officer",
    "employer": "The Sullivan Centre",
@@ -882,22 +882,6 @@
    "why": "Fixed-term achievement support assistant working with a child in KS2 at a Sutton Park primary school, 30 hours a week in term time; enhanced DBS required."
   },
   {
-   "id": "voyage-care-support-worker-hull-hu12-8tx-6ae0222a",
-   "title": "Support Worker",
-   "employer": "Voyage Care",
-   "location": "Residential service, HU12 8TX (east of Hull)",
-   "pay": "£12.72 - £14.22 an hour",
-   "hours": "Full time, permanent; shifts 08:00-15:00, 15:00-22:00 and 22:00-08:00",
-   "category": "Care & Support",
-   "closes": "2026-11-25",
-   "posted": "2026-10-27",
-   "url": "https://www.jobs.service.gov.uk/jobs/6ae0222a1ffc3902b6549bac",
-   "source": "GOV.UK Find a Job",
-   "fit": "good",
-   "addedAt": "2026-11-18T13:48:57Z",
-   "why": "Support worker in a Voyage Care residential service helping people with complex needs gain independence, with personal care and community activities; full UK driving licence required and rota includes night shifts."
-  },
-  {
    "id": "cottingham-high-school-attendance-officer-cottingham",
    "title": "Attendance Officer (maternity cover)",
    "employer": "Cottingham High School (The Consortium Academy Trust)",
@@ -962,22 +946,6 @@
    "why": "Female direct payment worker supporting one person at home with personal care, meals, medication including insulin, and trips out; own car with business insurance and enhanced DBS required."
   },
   {
-   "id": "eryc-dp-direct-payment-worker-swanland-eryc009765",
-   "title": "Direct Payment Worker (child with autism)",
-   "employer": "Private family via East Riding Direct Payments (external vacancy)",
-   "location": "Swanland",
-   "pay": "£15 per hour",
-   "hours": "4 hours per week term time, 6 hours per week holidays, flexible rota",
-   "category": "Care & Support",
-   "closes": "2026-11-25",
-   "posted": "",
-   "url": "https://www.eastridingcouncil.jobs/job-search/?entry=eryc009765",
-   "source": "East Riding Council Jobs",
-   "fit": "stretch",
-   "addedAt": "2026-11-18T06:51:00Z",
-   "why": "Part-time support worker helping a child with autism take part in community activities and build social skills; own vehicle required."
-  },
-  {
    "id": "eryc-dp-support-worker-swanland-eryc009868",
    "title": "Support Worker (autism, term time + holidays)",
    "employer": "Private family via East Riding Direct Payments (external vacancy)",
@@ -994,22 +962,6 @@
    "why": "Small-hours support worker taking an autistic person to community activities and giving emotional support; own car required, autism experience preferred."
   },
   {
-   "id": "kingsway-primary-learning-assistant-goole-eryc009912",
-   "title": "Learning Assistant (1:1 and groups)",
-   "employer": "Kingsway Primary School (East Riding of Yorkshire Council)",
-   "location": "Fountayne Street, Goole DN14 5HQ",
-   "pay": "£20,184 - £20,510 per year (Grade 4A, term-time pro rata)",
-   "hours": "31.25 hours per week, Mon-Fri, fixed term",
-   "category": "Schools & SEN",
-   "closes": "2026-11-25",
-   "posted": "",
-   "url": "https://www.eastridingcouncil.jobs/job-search/?entry=eryc009912",
-   "source": "East Riding Council Jobs",
-   "fit": "good",
-   "addedAt": "2026-11-18T06:51:00Z",
-   "why": "Primary school learning assistant giving 1:1 support and running intervention groups; application form only, enhanced DBS required."
-  },
-  {
    "id": "leconfield-primary-admin-officer-leconfield-eryc009930",
    "title": "Admin Officer",
    "employer": "Leconfield Primary School (East Riding of Yorkshire Council)",
@@ -1024,22 +976,6 @@
    "fit": "good",
    "addedAt": "2026-11-18T06:51:00Z",
    "why": "School admin officer handling reception and general office work alongside the headteacher and business manager; Microsoft Office skills, discretion and enhanced DBS required."
-  },
-  {
-   "id": "liberty-academy-advanced-teaching-assistant-18-75h-hull-6afc2bd2",
-   "title": "Advanced Teaching Assistant (18.75 hours, fixed term)",
-   "employer": "Heartwood Learning Trust (Liberty Academy)",
-   "location": "Hull HU9 5YB",
-   "pay": "£11,289 - £11,650 a year (actual, part time)",
-   "hours": "18.75 hours per week, term time only, fixed term to 31 Aug 2027",
-   "category": "Schools & SEN",
-   "closes": "2026-11-25",
-   "posted": "2026-11-17",
-   "url": "https://www.jobs.service.gov.uk/jobs/6afc2bd255f177b7a110535f",
-   "source": "GOV.UK Find a Job",
-   "fit": "good",
-   "addedAt": "2026-11-18T06:51:00Z",
-   "why": "Part-time advanced teaching assistant at an alternative provision academy, supporting groups and individual pupils and reporting to the SENCO; Level 2 English/maths and Level 3 or equivalent experience asked for."
   },
   {
    "id": "north-ferriby-primary-level-2-teaching-assistant-north-ferriby-eryc009921",
@@ -1874,22 +1810,6 @@
    "why": "Personal care, light meals, help eating and drinking and some lifting; dementia/Alzheimer's experience preferred, DBS."
   },
   {
-   "id": "choices-and-rights-pa-for-a-man-needing-full-support-hull-hu3-z034",
-   "title": "PA for a man needing full support (Z034)",
-   "employer": "Private employer via Choices and Rights Disability Coalition (Direct Payment)",
-   "location": "Hull HU3",
-   "pay": "£13.30/hr",
-   "hours": "13.5 hrs/week, mornings and Sunday evening",
-   "category": "Care & Support",
-   "closes": "2026-11-25",
-   "posted": "2026-10-26",
-   "url": "https://www.jobs.service.gov.uk/jobs/6adf2b65cde5c8a238cf0df3",
-   "source": "jobs.service.gov.uk (DWP Work Hub)",
-   "fit": "good",
-   "addedAt": "2026-11-14T16:50:13Z",
-   "why": "Dressing, washing, toileting, meals and hoisting (training given) for a wheelchair user; enhanced DBS paid."
-  },
-  {
    "id": "choices-and-rights-pa-for-a-sociable-lady-hull-hu9-ax1971",
    "title": "PA for a sociable lady (AX1971)",
    "employer": "Private employer via Choices and Rights Disability Coalition (Direct Payment)",
@@ -2306,22 +2226,6 @@
    "why": "Medication administration, personal care, meals and community activities for a 37-year-old autistic woman with mobility needs; female only (GOR), support-needs experience, enhanced DBS."
   },
   {
-   "id": "eryc-dp-direct-payment-worker-bridlington-eryc008754",
-   "title": "Direct Payment Worker (PA)",
-   "employer": "Private employer via East Riding Council Direct Payments",
-   "location": "Bridlington",
-   "pay": "£15/hr",
-   "hours": "8 hrs/week in school holidays",
-   "category": "Care & Support",
-   "closes": "2026-11-25",
-   "posted": "",
-   "url": "https://www.eastridingcouncil.jobs/job-search/?entry=eryc008754",
-   "source": "eastridingcouncil.jobs",
-   "fit": "good",
-   "addedAt": "2026-11-14T16:50:13Z",
-   "why": "Community activities and emotional support for a 9-year-old autistic boy with complex needs; must transport self, additional-needs experience, enhanced DBS paid."
-  },
-  {
    "id": "eryc-dp-direct-payment-worker-bridlington-eryc009457",
    "title": "Direct Payment Worker (PA)",
    "employer": "Private employer via East Riding Council Direct Payments",
@@ -2642,22 +2546,6 @@
    "why": "Agency shifts in care homes, nursing homes, home care and supported living giving personal care, mobility and meal support; DBS required, care experience and qualifications desirable not essential."
   },
   {
-   "id": "huth-clinical-support-worker-acute-assessment-unit-167ea764",
-   "title": "Clinical Support Worker – Acute Assessment Unit (Band 3)",
-   "employer": "Hull University Teaching Hospitals NHS Trust",
-   "location": "Castle Hill Hospital, Cottingham (cross-site with HRI)",
-   "pay": "£25,760 - £27,476 per year (Band 3)",
-   "hours": "37.5 hours/week, full-time",
-   "category": "Healthcare Assistant",
-   "closes": "2026-11-25",
-   "posted": "2026-11-11",
-   "url": "https://www.jobclerk.com/job/clinical-support-worker/167ea764-d522-4b44-b581-bbc79abc5060",
-   "source": "jobclerk.com",
-   "fit": "strong",
-   "addedAt": "2026-11-14T16:50:13Z",
-   "why": "Band 3 CSW doing observations, venepuncture, cannulation, ECGs and point-of-care testing; recent hospital patient-facing experience (or willingness to train in phlebotomy/cannulation/ECG) and DBS check required."
-  },
-  {
    "id": "huth-recruitment-officer-cottingham-6af590ba",
    "title": "Recruitment Officer (Medical Staffing)",
    "employer": "Hull University Teaching Hospitals NHS Trust",
@@ -2672,22 +2560,6 @@
    "fit": "good",
    "addedAt": "2026-11-14T16:50:13Z",
    "why": "Band 3-pay recruitment admin for doctors: advertising posts, arranging interviews, chasing pre-employment checks and issuing contracts; requirements in attached person spec."
-  },
-  {
-   "id": "huth-senior-health-care-support-worker-frailty-hri-6af481d0",
-   "title": "Senior Health Care Support Worker – Frailty Assessment",
-   "employer": "Hull University Teaching Hospitals NHS Trust",
-   "location": "Hull Royal Infirmary, Hull HU3 2JZ",
-   "pay": "£24,937 - £26,598 pro rata",
-   "hours": "Part-time",
-   "category": "Healthcare Assistant",
-   "closes": "2026-11-25",
-   "posted": "2026-11-11",
-   "url": "https://www.jobs.service.gov.uk/jobs/6af481d05ddccbfd39bfde49",
-   "source": "GOV.UK Find a Job (jobs.service.gov.uk)",
-   "fit": "strong",
-   "addedAt": "2026-11-14T16:50:13Z",
-   "why": "Band 3 HCSW on the frailty assessment unit supporting patients and families and carrying out delegated clinical tasks under registered nurses; DBS and care requirements in attached person spec."
   },
   {
    "id": "kings-mill-school-learning-support-assistant-level-2-driffield-eryc009839",
@@ -2850,22 +2722,6 @@
    "why": "Help children with a range of needs access learning and build confidence, working with teachers, parents and external professionals (ideally combined with linked breakfast club post); enhanced DBS and two references required."
   },
   {
-   "id": "st-annes-school-learning-support-assistant-level-2-hessle-eryc009902",
-   "title": "Learning Support Assistant - Level 2",
-   "employer": "St Anne's School, Sixth Form College and Residence (East Riding of Yorkshire Council)",
-   "location": "Boothferry Road, Hessle HU13 9AR",
-   "pay": "£23,939 - £24,327 per year (Grade 4B, term-time pro rata)",
-   "hours": "35 hours per week, Mon-Fri, permanent",
-   "category": "Schools & SEN",
-   "closes": "2026-11-25",
-   "posted": "",
-   "url": "https://www.eastridingcouncil.jobs/job-search/?location=Bridlington+and+Driffield%2Fentry-not-found&entry=eryc009902",
-   "source": "East Riding Council Jobs",
-   "fit": "good",
-   "addedAt": "2026-11-14T16:50:13Z",
-   "why": "1:1 and small-group support for learners aged 3-19 with complex medical needs and severe learning difficulties, including personal care (feeding, changing); no formal qualification required but GCSE English/Maths, willingness to train and enhanced DBS needed."
-  },
-  {
    "id": "vision-for-education-tutor-goole",
    "title": "Tutor (1:1 Maths and English)",
    "employer": "Vision for Education",
@@ -2896,22 +2752,6 @@
    "fit": "good",
    "addedAt": "2026-11-14T16:50:13Z",
    "why": "1:1 Maths and English tuition for pupils out of school or facing barriers to learning, at home, library, school or online; teaching qualification or experience, EHCP experience and enhanced DBS required."
-  },
-  {
-   "id": "voyage-care-support-worker-driffield-yo25-8qz",
-   "title": "Support Worker (Driffield)",
-   "employer": "Voyage Care",
-   "location": "Driffield YO25 8QZ",
-   "pay": "£12.72-£14.22/hr + enhancements",
-   "hours": "Full time, 08-15 / 15-22 / 22-08 shifts",
-   "category": "Care & Support",
-   "closes": "2026-11-25",
-   "posted": "2026-10-27",
-   "url": "https://www.jobs.service.gov.uk/jobs/6ae0222ac85e5ec2da570f07",
-   "source": "jobs.service.gov.uk (DWP Work Hub)",
-   "fit": "strong",
-   "addedAt": "2026-11-14T16:50:13Z",
-   "why": "Support people with enhanced needs (autism, mental health, behaviours of distress) at a Driffield residential service with personal care and life skills; DBS and references, no experience needed."
   },
   {
    "id": "wellburn-care-homes-night-senior-care-assistant-driffield-yo25-6nu",
@@ -3216,22 +3056,6 @@
    "fit": "good",
    "addedAt": "2026-11-14T16:28:00Z",
    "why": "Specialist TA at a special school for pupils with severe physical disabilities and complex needs, including personal and medical care; training provided."
-  },
-  {
-   "id": "liberty-academy-advanced-teaching-assistant-hull",
-   "title": "Advanced Teaching Assistant",
-   "employer": "Liberty Academy",
-   "location": "Hull, HU9 5YB",
-   "pay": "£17,311–£17,864 actual (FTE £26,016–£26,847, Grade D)",
-   "hours": "28.75 hours per week, term time only",
-   "category": "Schools & SEN",
-   "closes": "2026-11-25",
-   "posted": "2026-11-03",
-   "url": "https://teaching-vacancies.service.gov.uk/jobs/advanced-teaching-assistant-ef7ac705-a02f-4677-b5cd-3d40611e0829",
-   "source": "Teaching Vacancies",
-   "fit": "good",
-   "addedAt": "2026-11-14T16:28:00Z",
-   "why": "Fixed-term TA line-managed by the SENCO, helping plan learning and supervising groups or individual pupils."
   },
   {
    "id": "northern-angels-care-assistant-driffield-96009126153",
