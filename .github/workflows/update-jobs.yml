@@ -1,0 +1,45 @@
+name: Update jobs
+
+# Runs on GitHub's servers, so the site keeps updating without Claude.
+# Times are UTC (GitHub has no time zones): 07:20 and 16:20, i.e. the same in UK winter time.
+on:
+  schedule:
+    - cron: "20 7,16 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-jobs
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Search job sites and update jobs.json
+        run: |
+          git config user.name "kishis-job-finder bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            python scripts/update_jobs.py
+            if git diff --quiet -- jobs.json; then
+              echo "No changes"; exit 0
+            fi
+            N=$(python -c "import json;print(len(json.load(open('jobs.json'))['jobs']))")
+            git add jobs.json
+            git commit -m "Update jobs ($N open) [automatic]"
+            if git push origin HEAD:main; then exit 0; fi
+            echo "Push clashed with another update, retrying"; sleep 20
+          done
+          exit 1
