@@ -1,6 +1,38 @@
 {
- "updatedAt": "2026-11-27T06:56:11Z",
+ "updatedAt": "2026-11-27T13:45:03Z",
  "jobs": [
+  {
+   "id": "hull-trinity-house-academy-hlta-english-hull-hu3",
+   "title": "Higher Level Teaching Assistant (HLTA) for English",
+   "employer": "Hull Trinity House Academy (Delta Academies Trust)",
+   "location": "Hull, HU3 1UP",
+   "pay": "£30,515 - £33,119 FTE (from £26,362.80 actual)",
+   "hours": "Full-time, fixed term, start ASAP",
+   "category": "Schools & SEN",
+   "closes": "2026-12-06",
+   "posted": "2026-09-14",
+   "url": "https://teaching-vacancies.service.gov.uk/jobs/higher-level-teaching-assistant-hlta-for-english-0c64c793-c68e-4be6-8117-50d34c08ddd3",
+   "source": "Teaching Vacancies",
+   "fit": "stretch",
+   "addedAt": "2026-11-27T13:52:00Z",
+   "why": "Full-time fixed-term higher level teaching assistant supporting English teaching at a Hull secondary academy and contributing to the development of support staff and pupils."
+  },
+  {
+   "id": "aspire-academy-alternative-provision-tutor-teaching-assistant-hull",
+   "title": "Alternative Provision Tutor / Teaching Assistant",
+   "employer": "Aspire Academy",
+   "location": "Hull, HU9 5DE",
+   "pay": "£22,278.76–£22,990.38 actual (FTE £26,016–£26,847, Grade D)",
+   "hours": "37 hours per week, term time only",
+   "category": "Schools & SEN",
+   "closes": "2026-12-07",
+   "posted": "2026-11-24",
+   "url": "https://teaching-vacancies.service.gov.uk/jobs/alternative-provision-tutor-teaching-assistant-c8e572dc-76ad-4592-b6a0-61a34151f198",
+   "source": "Teaching Vacancies",
+   "fit": "good",
+   "addedAt": "2026-11-14T16:28:00Z",
+   "why": "Permanent tutor/teaching assistant at an alternative provision academy giving teaching, learning and pastoral support to individuals and small groups, 37 hours a week term time."
+  },
   {
    "id": "alderman-cogans-primary-teaching-assistant-level-2-eyfs-hull-hu9",
    "title": "Teaching Assistant (Level 2, EYFS)",
