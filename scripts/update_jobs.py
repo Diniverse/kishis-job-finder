@@ -414,8 +414,13 @@ def main():
         key = norm(employer)[:20] + norm(title)[:30]
         if key in known_keys or alt_key(job) in known_keys or alt_key2(job) in known_keys:
             continue
-        tail = (ref.rstrip("/").split("/")[-1])[:8] if src != "tv" else slug(ref.split("/")[-1][-12:], 12)
-        jid = "-".join(x for x in [slug(employer, 30), slug(title, 40), slug(location.split(",")[0], 15), slug(tail, 12)] if x)
+        if src == "nhs":
+            tail = ref  # full NHS Jobs reference, e.g. C9356-26-00025
+        elif src == "tv":
+            tail = slug(ref.split("/")[-1][-12:], 12)
+        else:
+            tail = (ref.rstrip("/").split("/")[-1])[:8]
+        jid = "-".join(x for x in [slug(employer, 30), slug(title, 40), slug(location.split(",")[0], 15), slug(tail, 16)] if x)
         if jid in known_ids:
             continue
         job = {"id": jid, **job, "fit": fit_for(cat, title, employer, job["pay"]),
