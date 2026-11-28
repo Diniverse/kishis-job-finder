@@ -3,7 +3,7 @@
 
 Runs on GitHub Actions (see .github/workflows/update-jobs.yml). It:
   1. drops jobs whose closing date has passed,
-  2. searches GOV.UK Find a Job, Teaching Vacancies and Job Clerk for
+  2. searches NHS Jobs, Teaching Vacancies, Job Clerk and GOV.UK Find a Job for
      Hull / East Riding jobs of the kinds this site lists,
   3. opens each new advert to read pay, hours and the real closing date,
   4. adds the ones that pass the filters below and writes jobs.json.
@@ -22,8 +22,8 @@ import urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JOBS_FILE = os.environ.get("JOBS_FILE") or os.path.join(ROOT, "jobs.json")
 UA = "Mozilla/5.0 (compatible; kishis-job-finder/1.0; +https://github.com/Diniverse/kishis-job-finder)"
-TIMEOUT = int(os.environ.get("FETCH_TIMEOUT", "30"))
-MAX_DETAILS = int(os.environ.get("MAX_DETAILS", "80"))
+TIMEOUT = int(os.environ.get("FETCH_TIMEOUT", "20"))
+MAX_DETAILS = int(os.environ.get("MAX_DETAILS", "120"))
 NOW = dt.datetime.now(dt.timezone.utc)
 TODAY = NOW.date()
 
@@ -164,13 +164,18 @@ FAJ_TOWNS = ["Hull", "Beverley", "Bridlington", "Goole"]
 
 
 def faj_candidates():
-    seen = {}
+    seen, failures = {}, 0
     for town in FAJ_TOWNS:
         for word in FAJ_WORDS:
+            if failures >= 3:
+                print("  Find a Job is not responding; skipping it this run", file=sys.stderr)
+                return [("faj", jid, f"https://www.jobs.service.gov.uk/jobs/{jid}", *v) for jid, v in seen.items()]
             page = fetch("https://www.jobs.service.gov.uk/jobs/search?keywords="
                          + urllib.request.quote(word) + "&location=" + town)
             if not page:
+                failures += 1
                 continue
+            failures = 0
             for card in page.split('data-testid="searchResultCard-')[1:]:
                 jid = card[:24]
                 t = re.search(r"<h2[^>]*>(.*?)</h2>", card, re.S)
@@ -201,6 +206,63 @@ def faj_detail(url):
     return {"employer": after(L, "Company:"), "pay": after(L, "Salary:"), "hours": after(L, "Hours:"),
             "location": after(L, "Location:"), "type": after(L, "Job type:"),
             "posted": parse_date(after(L, "Posting date:")), "closes": closes, "summary": summ}
+
+
+NHS_WORDS = ["healthcare assistant", "healthcare support worker", "care assistant", "support worker",
+             "administrator", "receptionist", "ward clerk", "pharmacy assistant", "phlebotomist",
+             "laboratory assistant", "clinical coding", "care navigator", "therapy assistant"]
+NHS_PLACES = [("Hull", 15), ("Bridlington", 10), ("Goole", 10), ("Driffield", 10)]
+NHS_PRESET = {}  # ref -> fields read from the search results card
+
+
+def _strong(block, test):
+    m = re.search(r'data-test="search-result-' + test + r'"[^>]*>.*?<strong[^>]*>(.*?)</strong>', block, re.S)
+    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", m.group(1)))).strip() if m else ""
+
+
+def nhs_candidates():
+    out, failures = {}, 0
+    for place, dist in NHS_PLACES:
+        for word in NHS_WORDS:
+            if failures >= 3:
+                print("  NHS Jobs is not responding; skipping it this run", file=sys.stderr)
+                return list(out.values())
+            page = fetch("https://www.jobs.nhs.uk/candidate/search/results?keyword=" + urllib.request.quote(word)
+                         + f"&location={place}&distance={dist}&sort=publicationDateDesc&language=en")
+            if not page:
+                failures += 1
+                continue
+            failures = 0
+            for block in page.split('data-test="search-result"')[1:]:
+                m = re.search(r'href="/candidate/jobadvert/([A-Z0-9-]+)[^"]*"[^>]*>(.*?)</a>', block, re.S)
+                if not m or m.group(1) in out:
+                    continue
+                ref, title = m.group(1), html.unescape(re.sub(r"\s+", " ", m.group(2))).strip()
+                lm = re.search(r'data-test="search-result-location".*?<h3[^>]*>(.*?)<div[^>]*location-font-size[^>]*>(.*?)</div>',
+                               block, re.S)
+                emp = html.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", lm.group(1)))).strip() if lm else ""
+                loc = html.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", lm.group(2)))).strip() if lm else ""
+                NHS_PRESET[ref] = {"employer": emp, "location": loc, "pay": _strong(block, "salary"),
+                                   "posted": parse_date(_strong(block, "publicationDate")),
+                                   "closes": parse_date(_strong(block, "closingDate")),
+                                   "hours": ", ".join(x for x in [_strong(block, "workingPattern"),
+                                                                   _strong(block, "jobType")] if x)}
+                out[ref] = ("nhs", ref, f"https://www.jobs.nhs.uk/candidate/jobadvert/{ref}", title, emp, loc)
+    return list(out.values())
+
+
+def nhs_detail(url):
+    ref = url.rsplit("/", 1)[-1]
+    d = dict(NHS_PRESET.get(ref, {}))
+    page = fetch(url)
+    if page:
+        m = re.search(r'id="job_overview"[^>]*>(.*?)</', page, re.S)
+        if m:
+            d["summary"] = html.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", m.group(1)))).strip()
+        c = re.search(r"The closing date is (\d{1,2} \w+ \d{4})", page)
+        if c:
+            d["closes"] = parse_date(c.group(1))
+    return d or None
 
 
 TV_ORGS = [("kingston-upon-hull-city-of-local-authority", 6), ("east-riding-of-yorkshire-local-authority", 3)]
@@ -274,8 +336,8 @@ def jc_detail(url):
             "closes": parse_date(after(L, "Deadline")), "summary": summ}
 
 
-DETAIL = {"faj": faj_detail, "tv": tv_detail, "jc": jc_detail}
-SOURCE = {"faj": "GOV.UK Find a Job", "tv": "Teaching Vacancies", "jc": "Job Clerk"}
+DETAIL = {"faj": faj_detail, "tv": tv_detail, "jc": jc_detail, "nhs": nhs_detail}
+SOURCE = {"faj": "GOV.UK Find a Job", "tv": "Teaching Vacancies", "jc": "Job Clerk", "nhs": "NHS Jobs"}
 
 
 # ---------------------------------------------------------------- main
@@ -289,6 +351,11 @@ def alt_key(j):
     return "alt:" + norm(j.get("title"))[:10] + (norm(pc.group(1)) if pc else norm(j.get("location"))[:12]) + (j.get("closes") or "")
 
 
+def alt_key2(j):
+    """Same advert on two sites with different location wording: employer + title start + closing date."""
+    return "alt2:" + norm(j.get("employer"))[:10] + norm(j.get("title"))[:15] + (j.get("closes") or "none")
+
+
 def main():
     data = json.load(open(JOBS_FILE, encoding="utf-8"))
     jobs = [j for j in data.get("jobs", []) if is_open(j)]
@@ -296,10 +363,19 @@ def main():
     known_urls = {j["url"].split("?")[0] for j in data.get("jobs", [])}
     known_ids = {j["id"] for j in data.get("jobs", [])}
     known_keys = {norm(j["employer"])[:20] + norm(j["title"])[:30] for j in data.get("jobs", [])}
-    known_keys |= {alt_key(j) for j in data.get("jobs", [])}
+    known_keys |= {alt_key(j) for j in data.get("jobs", [])} | {alt_key2(j) for j in data.get("jobs", [])}
+
+    added_file = os.environ.get("ADDED_FILE")
+    if os.environ.get("MERGE_ONLY") and added_file and os.path.exists(added_file):
+        # retry after a push clash: re-apply the jobs found earlier onto the latest jobs.json, no searching
+        added = [j for j in json.load(open(added_file, encoding="utf-8"))
+                 if j["id"] not in known_ids and j["url"] not in known_urls and alt_key(j) not in known_keys]
+        write(added, jobs, dropped)
+        return
 
     cands = []
-    for name, fn in (("Find a Job", faj_candidates), ("Teaching Vacancies", tv_candidates), ("Job Clerk", jc_candidates)):
+    for name, fn in (("NHS Jobs", nhs_candidates), ("Teaching Vacancies", tv_candidates), ("Job Clerk", jc_candidates),
+                     ("Find a Job", faj_candidates)):
         found = fn()
         print(f"{name}: {len(found)} listings")
         cands += found
@@ -336,7 +412,7 @@ def main():
         if not is_open(job, max_age=21):
             continue
         key = norm(employer)[:20] + norm(title)[:30]
-        if key in known_keys or alt_key(job) in known_keys:
+        if key in known_keys or alt_key(job) in known_keys or alt_key2(job) in known_keys:
             continue
         tail = (ref.rstrip("/").split("/")[-1])[:8] if src != "tv" else slug(ref.split("/")[-1][-12:], 12)
         jid = "-".join(x for x in [slug(employer, 30), slug(title, 40), slug(location.split(",")[0], 15), slug(tail, 12)] if x)
@@ -349,8 +425,15 @@ def main():
         known_ids.add(jid)
         known_keys.add(key)
         known_keys.add(alt_key(job))
+        known_keys.add(alt_key2(job))
         print(f"  + {title} | {employer} | {location} | closes {job['closes'] or '?'}")
 
+    if added_file:
+        json.dump(added, open(added_file, "w", encoding="utf-8"), ensure_ascii=False)
+    write(added, jobs, dropped)
+
+
+def write(added, jobs, dropped):
     out = {"updatedAt": NOW.strftime("%Y-%m-%dT%H:%M:%SZ"), "jobs": added + jobs}
     with open(JOBS_FILE, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
