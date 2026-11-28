@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
-      ADDED_FILE: ${{ runner.temp }}/added.json
+      ADDED_FILE: /tmp/added.json
     steps:
       - uses: actions/checkout@v4
 
